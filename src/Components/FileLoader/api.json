@@ -1,0 +1,133 @@
+{
+  "esgResponse": [{
+    "entityName": "String",
+    "benchmarkDetails": [
+      {
+        "question": "ESG Risk Rating for MSCI",
+        "esgType": "ESGScore",
+        "esgIndicators": "MSCISustainalytics",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is net zero target",
+        "esgType": "Environment",
+        "esgIndicators": "NetZeroTarget",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the interim emission reduction target",
+        "esgType": "Environment",
+        "esgIndicators": "InterimEmissionsReductionTarget",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the Renewable Electricity Target",
+        "esgType": "Environment",
+        "esgIndicators": "RenewableElectricityTarget",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the Circularity Stratergy & targets",
+        "esgType": "Environment",
+        "esgIndicators": "CircularityStratergy",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the Diversity Equity and Inclusion target",
+        "esgType": "Social",
+        "esgIndicators": "DE&ITarget",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the employee health and Safety audit target",
+        "esgType": "Goverance",
+        "esgIndicators": "HealthAndSafetyTarget",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is supply audit target",
+        "esgType": "Goverance",
+        "esgIndicators": "SuppluAuditTarget",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the SBTi rating",
+        "esgType": "Reporting",
+        "esgIndicators": "SBTi",
+        "primaryDetails": "",
+        "secondaryDetails": "",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the CDP rating",
+        "esgType": "Reporting",
+        "esgIndicators": "CDP",
+        "primaryDetails": "",
+        "secondaryDetails": "D",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the GRI rating",
+        "esgType": "Reporting",
+        "esgIndicators": "GRI",
+        "primaryDetails": "",
+        "secondaryDetails": "",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the SASB rating",
+        "esgType": "Reporting",
+        "esgIndicators": "SASB",
+        "primaryDetails": "",
+        "secondaryDetails": "",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "what is the TCFD rating",
+        "esgType": "Reporting",
+        "esgIndicators": "TCFD",
+        "primaryDetails": "",
+        "secondaryDetails": "Y",
+        "citationDetails": "",
+        "pageNumber": ""
+      },
+      {
+        "question": "is the entity focussing on ESG assurance",
+        "esgType": "Reporting",
+        "esgIndicators": "Assurance",
+        "primaryDetails": "",
+        "secondaryDetails": "",
+        "citationDetails": "",
+        "pageNumber": ""
+      }
+    ]
+  }]
+}

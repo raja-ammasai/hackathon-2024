@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import axios from 'axios';
 
 function FileLoader(props) {
-  const { handleSetFileData } = props || {};
+  const { handleSetFileData, handleSetLoading } = props || {};
+  const ref = useRef();
   const [file, setFile] = useState()
   const [uploadedFileURL, setUploadedFileURL] = useState(null)
   const [entityName, setEntityName] = useState();
+
+  // const CancelToken = axios.CancelToken;
+  // let cancel;
+
+  const reset = () => {
+    ref.current.value = "";
+    setEntityName("");
+    handleSetLoading(false);
+  };
+
   function handleChange(event) {
     setFile(event.target.files[0])
   }
@@ -13,12 +24,11 @@ function FileLoader(props) {
     setEntityName(event.target.value);
   }
 
-  let [loading, setLoading] = useState(false);
 
   function handleSubmit(event) {
-    event.preventDefault()
-    setLoading(true);
-    const url = 'https://wellsfargo-genai24-8271.uc.r.appspot.com/esg/benchmark/upload/v1';
+    event.preventDefault();
+    handleSetLoading(true);
+    const url = `/esg/benchmark/upload/v1`;
     const formData = new FormData();
     formData.append('file', file);
     formData.append('fileName', file?.name);
@@ -32,16 +42,28 @@ function FileLoader(props) {
       axios.post(url, formData, config).then((response) => {
         setUploadedFileURL(response.data.fileUrl);
         handleSetFileData(response.data, entityName);
-        setLoading(false);
-      }).catch(error => {
-        setLoading(false);
-        return error;
-      });
+        reset();
+      }).catch((error) => {
+        // if (axios.isCancel(error)) {
+        //   console.log("axios catch --> post Request canceled");
+        // }
+        reset();
+      })
     }
     catch (e) {
-      setLoading(false);
-
+      // if (axios.isCancel(error)) {
+      //   console.log("try-catch --> post Request canceled");
+      // }
+      reset();
     }
+    setTimeout(() => {
+      // if (cancel !== undefined) {
+      //   console.log("timeout --> post Request canceled");
+      //   cancel();
+      //   reset();
+      // }
+      reset();
+    }, 120000);
   }
 
   return (
@@ -51,13 +73,10 @@ function FileLoader(props) {
           {"Entity Name"}{" "}
         </span>
         <input type="text" className="hk-entityNameInput" name="entityName" value={entityName} onChange={handleEntityName} />
-        <input type="file" className="hk-upload-file" onChange={handleChange} />
+        <input type="file" className="hk-upload-file" ref={ref} onChange={handleChange} />
         <button disabled={!entityName} className={"hk-upload-btn"} type="submit">Upload File</button>
       </form>
       {uploadedFileURL && <img src={uploadedFileURL} alt="Uploaded content" />}
-      {loading && <div class="ring">Loading
-        <span></span>
-      </div>}
     </div>
   );
 }

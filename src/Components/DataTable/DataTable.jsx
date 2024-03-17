@@ -14,8 +14,8 @@ function DataTable(props) {
 
     const renderCellContent = ({ cell: { value } }) => {
         const { primaryDetails, secondaryDetails } = value || {};
-        let PrimeDetails = () => { return primaryDetails?.toLowercase() == "tick" || primaryDetails?.toLowercase() == "y" ? <div className="green-tick">&#10004;</div> : primaryDetails == "." ? <div className="red-dot">&#128308;</div> : <div className="">{primaryDetails}</div> }
-        let SecondaryDetails = () => { return secondaryDetails?.toLowercase() == "tick" || secondaryDetails?.toLowercase() == "y"  ? <div className="green-tick">&#10004;</div> : secondaryDetails == "." ? <div className="red-dot">&#128308;</div> : <div className="">{secondaryDetails}</div> }
+        let PrimeDetails = () => { return  primaryDetails == "Y" ? <div className="green-tick">&#10004;</div> : primaryDetails == "N" ? <div className="red-dot">&#128308;</div> : <div className="">{primaryDetails}</div> }
+        let SecondaryDetails = () => { return  secondaryDetails == "Y"  ? <div className="green-tick">&#10004;</div> : secondaryDetails == "N" ? <div className="red-dot">&#128308;</div> : <div className="">{secondaryDetails}</div> }
         return (<><PrimeDetails /><SecondaryDetails /></>)
     };
 
