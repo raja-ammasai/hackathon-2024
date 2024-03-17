@@ -1,0 +1,46 @@
+.hk-table-wrapper {
+    margin: 2rem;
+}
+table {
+    color: #fff;
+}
+.column-header-Company {
+    background-color: #636060;
+}
+
+.column-header-ESCScore {
+    background-color: #15076f;
+}
+
+.column-header-Environmental {
+    background-color: #076f39;
+}
+
+.column-header-Social {
+    background-color: #0d6b87;
+}
+
+.column-header-Governance {
+    background-color: #d0c310;
+    color: #000;
+}
+
+.column-header-Reporting {
+    background-color: #636060;
+}
+
+tbody{
+    color: #000;
+}
+
+.column-cell, .column-row {
+    background-color: aliceblue;
+    text-align: center;
+    height: 2rem;
+}
+.green-tick {
+    color: #076f39;
+}
+.red-dot {
+    font-size: 7px;
+}
